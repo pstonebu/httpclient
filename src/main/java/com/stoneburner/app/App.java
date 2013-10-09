@@ -6,10 +6,6 @@ import org.apache.http.client.methods.*;
 import org.apache.http.*;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void main( String[] args )
