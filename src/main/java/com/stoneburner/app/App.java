@@ -61,7 +61,7 @@ public class App
         {
            System.out.println("Exception occurred: ");
            for (StackTraceElement ste : e.getStackTrace()) {
-                System.out.println(ste);
+                System.out.println("\t" + ste);
            }
            System.out.println(e.toString());
            System.exit(0);
