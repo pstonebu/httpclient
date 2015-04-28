@@ -59,7 +59,11 @@ public class App
 
         catch (Exception e)
         {
-           System.out.println("Exception occurred: " + e.getStackTrace() + e.toString());
+           System.out.println("Exception occurred: ");
+           for (StackTraceElement ste : e.getStackTrace()) {
+                System.out.println(ste);
+           }
+           System.out.println(e.toString());
            System.exit(0);
         }
 
