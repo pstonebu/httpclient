@@ -1,0 +1,54 @@
+{
+  "name" : {
+    "familyName" : "",
+    "givenName" : ""
+  },
+  "type" : "person",
+  "displayName" : "",
+  "jive" : {
+    "profile" : [ {
+      "value" : "",
+      "jive_label" : "Title"
+    }, {
+      "value" : "",
+      "jive_label" : "Department"
+    }, {
+      "value" : "Acme Inc.",
+      "jive_label" : "Company"
+    }, {
+      "value" : "09/05/2001",
+      "jive_label" : "Hire Date"
+    }, {
+      "value" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "jive_label" : "Biography"
+    } ],
+    "username" : "",
+    "password" : ""
+  },
+  "emails" : [ {
+    "value" : "",
+    "type" : "work",
+    "jive_label" : "Email",
+    "primary" : true
+  } ],
+  "addresses" : [ {
+    "value" : {
+      "streetAddress" : "915 SW Stark St",
+      "locality" : "Portland",
+      "region" : "Oregon",
+      "postalCode" : "97205",
+      "country" : "USA",
+      "formatted" : "915 SW Stark St\nPortland Oregon 97205\nUSA"
+    },
+    "jive_label" : "Address",
+    "primary" : true
+  } ],
+  "phoneNumbers" : [ {
+    "value" : "503.972.6655",
+    "jive_label" : "Phone Number",
+    "primary" : true
+  }, {
+    "value" : "503.972.6644",
+    "jive_label" : "Mobile Phone Number"
+  } ]
+}
