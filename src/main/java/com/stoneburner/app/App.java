@@ -28,23 +28,12 @@ public class App
 
     public static void main( String[] args )
     {
-        String inputURI = "";
-        int numUsers = 0;
-        System.out.println( "Please enter a Jive Host: " );
-
-        try
-        {
-            BufferedReader bufferRead = new BufferedReader(new InputStreamReader(System.in));
-            inputURI = bufferRead.readLine();
-            System.out.println("Number of users to create: ");
-            numUsers = Integer.valueOf(bufferRead.readLine());
-        }
-        catch (Exception e)
-        {
-            System.out.println("Caught exception " + e.toString());
-        }
+        String inputURI = args[0];
+        int numUsers = Integer.valueOf(args[1]);
+        String adminPassword = args[2];
 
         inputURI = inputURI + peopleURL;
+        System.out.println("Creating " + numUsers + " users at " + inputURI);
 
         App app = new App();
         NameGenerator generator = new NameGenerator();
@@ -57,7 +46,7 @@ public class App
         for (int i = 0; i < numUsers; i++) {
             HttpClient client = new DefaultHttpClient();
             HttpPost method = new HttpPost(inputURI);
-            String encoding = Base64.getEncoder().encodeToString(("admin:admin").getBytes());
+            String encoding = Base64.getEncoder().encodeToString(("admin:" + adminPassword).getBytes());
             method.setHeader("Authorization", "Basic " + encoding);
             method.setHeader("Content-Type", "application/json");
 
@@ -65,9 +54,9 @@ public class App
             String firstName = name.getFirstName();
             String lastName = name.getLastName();
             String displayName = firstName + "." + lastName;
-            String username = displayName;
             String password = "lkjlkj";
             String email = displayName + "@acmeinc.com";
+            String username = email;
             int randomTitle = ThreadLocalRandom.current().nextInt(0, titles.size());
             String title = titles.get(randomTitle);
             int randomDepartment = ThreadLocalRandom.current().nextInt(0, departments.size());
